@@ -1,7 +1,7 @@
 {
   "name": "baresoil-server",
   "title": "Baresoil Server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open-source, modular, realtime PaaS runtime.",
   "main": "lib/BaresoilServer.js",
   "bin": {
@@ -14,7 +14,7 @@
     "prod": "node lib/main.js",
     "test": "node_modules/.bin/mocha --recursive --bail --check-leaks test",
     "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha --recursive test/e2e test/entities test/infra test/sandbox test/server test/serde test/sysapp",
-    "postinstall": "scripts/postinstall.js"
+    "install-deps": "scripts/postinstall.js"
   },
   "repository": {
     "type": "git",
