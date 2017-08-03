@@ -1,7 +1,7 @@
 {
   "name": "baresoil-server",
   "title": "Baresoil Server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Open-source, modular, realtime PaaS runtime.",
   "main": "lib/BaresoilServer.js",
   "bin": {
