@@ -1,0 +1,5 @@
+node_modules
+cluster_data
+coverage
+config-*.json
+baresoil-server.conf.json

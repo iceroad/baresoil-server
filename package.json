@@ -1,0 +1,72 @@
+{
+  "name": "baresoil-server",
+  "title": "Baresoil Server",
+  "version": "1.0.0",
+  "description": "Open-source, modular, realtime PaaS runtime.",
+  "main": "lib/BaresoilServer.js",
+  "bin": {
+    "baresoil-server": "lib/main.js"
+  },
+  "scripts": {
+    "cleanup": "rm -rf node_modules lib/sysapp/server/node_modules lib/sandbox/SandboxDriver/node_modules",
+    "setup": "npm install --only=production --production && cd lib/sysapp/server && npm install --only=production --production && cd ../../sandbox/SandboxDriver && npm install",
+    "dev": "LOG=debug node_modules/.bin/supervisor -w lib node -- lib/main.js run",
+    "prod": "node lib/main.js",
+    "test": "node_modules/.bin/mocha --recursive --bail --check-leaks test",
+    "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha --recursive test/e2e test/entities test/infra test/sandbox test/server test/serde test/sysapp",
+    "postinstall": "scripts/postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:iceroad/baresoil-server.git"
+  },
+  "keywords": [
+    "realtime",
+    "runtime",
+    "paas",
+    "faas",
+    "open-source",
+    "modular",
+    "self-hosted"
+  ],
+  "author": "Mayank Lahiri <mayank@iceroad.io>",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=6.10.0"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "baresoil-provider-prod": "^1.0.1",
+    "body-parser": "^1.17.2",
+    "chalk": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "event-io": "^0.1.10",
+    "express": "^4.15.3",
+    "fs-extra": "^4.0.1",
+    "json-stable-stringify": "^1.0.1",
+    "jsonlint": "^1.6.2",
+    "lodash": "^4.17.4",
+    "lru-cache": "^4.1.1",
+    "mime-types": "^2.1.16",
+    "minimist": "^1.2.0",
+    "moment": "^2.18.1",
+    "multer": "^1.3.0",
+    "murmurhash": "0.0.2",
+    "normalize-path": "^2.1.1",
+    "pug": "^2.0.0-rc.3",
+    "runtype": "^0.2.3",
+    "sinon": "^3.0.0",
+    "strip-ansi": "^4.0.0",
+    "tar": "^3.1.9",
+    "temp": "^0.8.3",
+    "walk": "^2.3.9",
+    "ws": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.0",
+    "request": "^2.81.0",
+    "supervisor": "^0.12.0"
+  }
+}

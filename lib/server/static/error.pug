@@ -1,0 +1,55 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= 'Error ' + code + ': ' + reason
+    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
+    style.
+      body {
+        background-color: white;
+        font-family: 'Roboto';
+      }
+
+      h1 {
+        font-size: 64px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      p, .mono, td {
+        font-size: 18px;
+      }
+
+      p {
+        margin: 50px 0 50px 0;
+        line-height: 150%;
+      }
+
+      a, a:hover, a:visited, a:active {
+        text-decoration: none;
+        font-size: 18px;
+        color: #252BFF;
+      }
+
+      .container {
+        padding: 30px;
+      }
+
+      @media only screen and (min-width : 992px) {
+        .container {
+          padding-top: 20px;
+          padding-left: 25%;
+          padding-right: 25%;
+        }
+      }
+
+  body
+    div(class='container')
+      h1 Error #[span= code]
+      h2= reason
+      p= error
+      if showHome
+        a(href='/') Home

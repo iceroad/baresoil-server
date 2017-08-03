@@ -1,0 +1,9 @@
+{
+  "server": {
+    "Server": {
+      "address": "127.0.0.1",
+      "healthServerPort": 0,
+      "port": 0
+    }
+  }
+}

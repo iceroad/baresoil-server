@@ -1,0 +1,31 @@
+body {
+  background-color: white;
+  font-family: 'Roboto';
+}
+
+.container {
+  padding: 30px 20% 30px 20%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 64px;
+  color: #999;
+}
+
+h2 {
+  font-size: 28px;
+  color: #aaa;
+}
+
+p, .mono, td {
+  font-size: 18px;
+}
+
+@media only screen and (min-width : 992px) {
+  .container {
+    padding-top: 20px;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
