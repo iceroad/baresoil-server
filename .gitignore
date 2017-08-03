@@ -3,3 +3,5 @@ cluster_data
 coverage
 config-*.json
 baresoil-server.conf.json
+!lib/sysapp/server/node_modules
+!lib/sandbox/SandboxDriver/node_modules
