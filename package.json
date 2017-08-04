@@ -1,7 +1,7 @@
 {
   "name": "baresoil-server",
   "title": "Baresoil Server",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Open-source, modular, realtime PaaS runtime.",
   "main": "lib/BaresoilServer.js",
   "bin": {
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "async": "^2.5.0",
-    "baresoil-provider-prod": "^1.0.1",
+    "baresoil-provider-prod": "^1.0.2",
     "body-parser": "^1.17.2",
     "chalk": "^2.0.1",
     "cookie-parser": "^1.4.3",
