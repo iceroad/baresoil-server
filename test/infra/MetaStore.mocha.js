@@ -29,6 +29,7 @@ describe('MetaStore: transactional metadata store', function test() {
 
     bsServer = new BaresoilServer(_.cloneDeep(TestConfig));
     sinon.stub(bsServer.Server, 'init').yields();
+    sinon.stub(bsServer.Server, 'listen').yields();
     sinon.stub(bsServer.Hub, 'init').yields();
     sinon.stub(bsServer.SandboxManager, 'init').yields();
     sinon.stub(bsServer.UserManager, 'init').yields();

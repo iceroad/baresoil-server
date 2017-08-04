@@ -1,7 +1,7 @@
 {
   "name": "baresoil-server",
   "title": "Baresoil Server",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Open-source, modular, realtime PaaS runtime.",
   "main": "lib/BaresoilServer.js",
   "bin": {
@@ -9,12 +9,13 @@
   },
   "scripts": {
     "cleanup": "rm -rf node_modules lib/sysapp/server/node_modules lib/sandbox/SandboxDriver/node_modules",
-    "setup": "npm install --only=production --production && cd lib/sysapp/server && npm install --only=production --production && cd ../../sandbox/SandboxDriver && npm install",
+    "setup": "npm install --only=production --production && npm run setup-pkg",
     "dev": "LOG=debug node_modules/.bin/supervisor -w lib node -- lib/main.js run",
     "prod": "node lib/main.js",
+    "setup-pkg": "cd lib/sysapp/server && npm install --only=production --production && cd ../../sandbox/SandboxDriver && npm install",
     "test": "node_modules/.bin/mocha --recursive --bail --check-leaks test",
     "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha --recursive test/e2e test/entities test/infra test/sandbox test/server test/serde test/sysapp",
-    "install-deps": "scripts/postinstall.js"
+    "package": "scripts/make-packages.js"
   },
   "repository": {
     "type": "git",

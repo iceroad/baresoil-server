@@ -23,6 +23,7 @@ describe('AppManager: create, update, get, delete apps', function test() {
     sinon.stub(bsServer.Hub, 'init').yields();
     sinon.stub(bsServer.SandboxManager, 'init').yields();
     sinon.stub(bsServer.Server, 'init').yields();
+    sinon.stub(bsServer.Server, 'listen').yields();
     appManager = bsServer.AppManager;
     bsServer.init((err) => {
       if (err) return cb(err);

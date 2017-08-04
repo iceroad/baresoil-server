@@ -26,6 +26,7 @@ describe('Sandbox: container-based process isolation', function test() {
     bsServer = new BaresoilServer(_.cloneDeep(TestConfig));
     SandboxManager = bsServer.SandboxManager;
     sinon.stub(bsServer.Server, 'init').yields();
+    sinon.stub(bsServer.Server, 'listen').yields();
     sinon.stub(bsServer.Hub, 'init').yields();
 
     emissions = [];

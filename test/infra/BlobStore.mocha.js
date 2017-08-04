@@ -23,6 +23,7 @@ describe('BlobStore: immutable, content-hased, blob storage', function test() {
     contentHash = digest(content, 'base64');
     bsServer = new BaresoilServer(_.cloneDeep(TestConfig));
     sinon.stub(bsServer.Server, 'init').yields();
+    sinon.stub(bsServer.Server, 'listen').yields();
     sinon.stub(bsServer.Hub, 'init').yields();
     sinon.stub(bsServer.SandboxManager, 'init').yields();
     sinon.stub(bsServer.UserManager, 'init').yields();

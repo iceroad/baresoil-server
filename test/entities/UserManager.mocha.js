@@ -24,6 +24,7 @@ describe('UserManager: system-level user management', function test() {
     sinon.stub(bsServer.SandboxManager, 'init').yields();
     sinon.stub(bsServer.AppManager, 'init').yields();
     sinon.stub(bsServer.Server, 'init').yields();
+    sinon.stub(bsServer.Server, 'listen').yields();
     userManager = bsServer.UserManager;
     bsServer.init((err, results) => {
       if (err) return cb(err);

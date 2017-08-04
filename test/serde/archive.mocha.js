@@ -25,6 +25,7 @@ describe('SerDe: archive creation and extraction', function () {
   beforeEach((cb) => {
     bsServer = new BaresoilServer(_.cloneDeep(TestConfig));
     sinon.stub(bsServer.Server, 'init').yields();
+    sinon.stub(bsServer.Server, 'listen').yields();
     sinon.stub(bsServer.Hub, 'init').yields();
     bsServer.init((err, results) => {
       if (err) return cb(err);
